@@ -1,0 +1,119 @@
+@font-face{
+	src: url("../font/web fonts/opensans_bolditalic_macroman/OpenSans-BoldItalic-webfont.woff");
+	font-family: "MyWebFont";
+	
+}
+@font-face{
+	src: url("../font/web fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff");
+	font-family: "MyWebFont";
+}
+
+/*font untuk Nav*/
+.navbar-brand{
+	font-family: "MyWebFont";
+	font-size: 32px;
+	/*color: red;*/
+}
+
+/*penambahan gradasi*/
+
+/*ngakalin navbar pada  saat diberi gradasi yang diberi posisi relative dulu lalu diberi z-index*/
+.navbar{
+	position: relative;
+	z-index: 1;
+    margin-right: 5px;
+    background-color: rgb(118, 199, 247);
+   ;
+}
+.container_kategori{
+	margin-top: 40px;
+	background-color: white;
+	box-shadow: 0 3px 10px rgba(0,0,0,.2);
+	border-radius: 12px;
+	padding: 30px;
+
+}
+.title{
+    color: #616161;
+}
+.footer{
+	margin-top: 100px;
+}
+.footer p{
+	color: #acacac;
+	font-size: 18px
+	
+}
+.notif{
+	background-color: #fff;
+	 box-shadow:  0 1px 5px rgba(0,0,0,.2);
+	 width: 200px;
+	 margin: 0 auto;
+	 padding: 10px;
+	 opacity: 0;
+	 border-radius: 10px;
+}
+.overlay:target .notif{
+	animation:fadein 1s forwards;
+}
+
+/*animasi buat tombol close*/
+@keyframes fadein{
+	0%{
+		opacity: 0;
+		margin-top: -20px;
+
+	}
+	100%{
+		opacity:1;
+		margin-top: 0;
+	}
+}
+
+.overlay{
+	position: fixed;
+	background-color: rgba(0,0,0,0);
+	width: 0;
+	height:0;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+	text-align: center;
+	padding: 100px;
+	transition: .5s;
+	
+}
+.overlay:target{
+	width: auto;
+	height: auto;
+	bottom: 0;
+	left:0;
+	background-color: rgba(0,0,0,.4);
+	z-index: 99999;
+}
+
+@media (min-width: 992px) { 
+	.nav-link{
+	text-transform: uppercase;
+	margin-right: 30px;
+	}
+
+	/*garis bawah biru*/
+	.nav-link:hover::after {
+		content:'';
+		display: block;
+		border-bottom: 3px solid #0B63DC;
+		width: 50%;
+		margin: auto;
+		padding: 5px;
+		margin-bottom: -13px;
+	}
+
+	.navbar-brand{
+		/* color: white !important; */
+		text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	}
+
+	.clear{
+		clear: both;
+	}

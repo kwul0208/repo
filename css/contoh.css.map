@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,aAAa,CAAA;EACT,WAAW,EAAE,kBAAkB;CAClC",
+    "sources": [
+        "../../contoh/contoh.scss"
+    ],
+    "names": [],
+    "file": "contoh.css"
+}
